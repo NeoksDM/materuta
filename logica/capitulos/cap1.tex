@@ -1,0 +1,57 @@
+\chapter*{Introducci\'on}
+El libro hace una introducci\'on partiendo de la evoluci\'on de la l\'ogica matem\'atica durante el final del siglo XIX, resaltando las contribuciones de Boole, Frege, Russell, y Hilbert; mismas dotaron de celeridad al desarrollo. \\
+Acorde al libro, las relaciones de la l\'ogica matem\'atica con la matem\'atica, valga la redundancia, son 
+\begin{itemize}
+\item Motivaciones y objetivos, dado a la investigaci\'on en l\'ogica matem\'atica llega cerca de los fundamentos de estas, sobre todo en la teor\'ia de conjuntos. El libro da ejemplo con Frege intentando basar las matem\'aticas y principios te\'oricos de conjuntos, Russell intentando eliminar las contradicciones del sistema de Frege y Hilbert teniendo de objetivo demostrar los m\'etodos generalmente aceptados de las matem\'aticas como un todo no llevan a una contraddici\'on. Lo que es conocido como el programa de Hilbert (Hilbert's program). 
+\item M\'etodos, asegurando que en l\'ogica matem\'atica los m\'etodos son principalmente matem\'aticos.
+\item Aplicaciones en Matem\a'ticas, dado que todo resultado o m\'etodo obtenido en l\'ogica matem\'atica no s\'olo es util para los problemas fundamentales, estos incrementan la cantidad de herramientas para el uso en matem\'aticas
+\end{itemize}
+
+Con estos puntos claros, en la introducci\'on se sigue con la enunciaci\'on de la utilidad de la l\'ogica matem\'atica en otros campos del saber como la epistemolog\'ia de las ciencias.\\
+ A diferencia de en l\'ogica com\'un, aqu\'i las demostraciones son el centro de la investigaci\'on, pero s\'olo demostraciones matem\'aticas. Dada la naturaleza del tema, existe una estrecha relaci\'on entre el sujeto de investigaciones (demostraciones matem\'aticas) y el m\'etodo de investigaciones (demostraciones matem\'aticas), adem\'as de peligros de redudancia.\\
+
+\section*{Un ejemplo desde la Teor\'ia de Grupos}
+A continuaci\'on se presentan dos demostraciones que servir\'an de ejemplo adem\'as de material para preguntas sobre los temas tratados por este libro.\\
+El libro comenta que empieza con una demostraci\'on a un teorema de teor\'ia de grupos. Con lo cual indica que necesitamos "\emph{axiomas de teor\'ia de grupos}" (una pregunta que se me ocurre ahora ?`El libro explicar\'a lo que son los axiomas?).\\
+Usando a siguiente notaci\'on:
+\begin{itemize}
+	\item $\circ$ denota una operaci\'on binaria sobre un conjunto,
+	\item $G$ denota al conjunto,
+	\item $e$ denota el neutro de la operaci\'on $\circ$.
+\end{itemize}
+Y se formula la siguiente definici\'on con sus axiomas
+\begin{def}[Grupo intuitivo]
+	Llamamos \emph{grupo} de forma intuitiva a la terna $(G, \circ^{G}, e^{G})$ donde $G$ es un conjunto no vac\'io, $\circ$ una funci\'on que va de $G \times G$ a $G$, $e$ un elemento de $G$, y los tres est\'an sujetos a los siguientes axiomas
+\begin{itemize}
+	\item[(G1)] Para todo $x, y, z \in G: (x \circ y) \circ z = x \circ ( y \circ z)$
+	\item[(G2)] Existe $e \in G$ tal que para todo $x \in G, x \circ e = x$
+	\item[(G3)] Para todo $x \in G, \exists y \in G: x \circ y = e$
+\end{itemize}
+Un grupo es una terna $(G, \circ^{G}, e^{G})$ satisfaciendo los axiomas (G$1$), (G$2$), (G$3$). Me gustar\'ia recalcar que $\circ$, como operaci\'on binaria que es, es v\'alida para cada par de elementos de $G^{2}$ la cual mapea a $G$. Se da como ejemplos de grupo y no grupo a $(\mathbb{R}, +, 0)$ y $(\mathbb{R}, \cdot, 1)$ respectivamente, adem\'as de darles el nombre de \emph{estructuras}.\\
+Ahora s\'i, procedemos a la demostraci\'on del siguiente teorema
+
+\begin{thm}[Existencia de inverso por izquierda]
+	Para todo $x$ existe un $y$ tal que $y \circ x = e$
+\end{thm}
+\begin{proof}[Demostraci\'on, mia]
+	Partimos del tercer axioma de grupo y escribimos
+	$$y \circ x = y \circ x;$$
+	del segundo axioma de grupo, tenemos
+	$$y \circ x = y \circ x \circ e;$$
+	por el tercer axioma de grupo sabemos que existe $y'$ tal que $y \circ y' = e$, y ponemos
+	$$y \circ x = y \circ x \circ y \circ y';$$
+	por el tercer y segundo axiomas de grupos, obtenemos
+	$$y \circ x = y \circ y';$$
+	por nuestra asunci\'on hecha previamente, conseguimos
+	$$y \circ x = e;$$
+	dado que esto es resultado de los axiomas que gobiernan sobre todo $G$, entonces, para todo $x$ existe $y$ tal que $y \circ x = e = x \circ y$.
+\end{proof}
+De aqu\'i se puede concluir que la veracidad del teorema es consecuencia de los axiomas de la teor\'ia de grupos.\\
+\section*{Un ejemplo desde la teor\'ia de relaciones de equivalencia}
+Luego de formular los axiomas de la relaci\'on de equivalencia
+\begin{itemize}
+	\item[(E1)] Para todo $x: xRx$,
+	\item[(E2)] Para todo $x$ y $y$, si $xRy$ entonces $yRx$,
+	\item[(E3)] Para todo $x, y$ y $z$; si $xRy$ y $yRz$ entonces $xRz$.
+\end{itemize}
+Sea A un conjunto no vac\'io y sea $R^{A}$
